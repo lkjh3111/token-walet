@@ -1,16 +1,39 @@
 package com.template
 
 import com.r3.corda.lib.tokens.contracts.EvolvableTokenContract
-import net.corda.core.contracts.Contract
+import net.corda.core.contracts.*
 import net.corda.core.transactions.LedgerTransaction
 
-class TokenWalletContract : EvolvableTokenContract(), Contract {
+class TokenWalletContract: Contract {
+    companion object{
+        const val ID = "com.template.TokenWalletContract"
+    }
 
-    override fun additionalCreateChecks(tx: LedgerTransaction) {
+    interface Commands : CommandData {
+        class Register : TypeOnlyCommandData(), Commands
+        class Preorder : TypeOnlyCommandData(), Commands
+        class Transfer : TypeOnlyCommandData(), Commands
+    }
+
+    override fun verify(tx: LedgerTransaction) {
+        val command = tx.commands.requireSingleCommand<Commands>()
+
+        when (command.value){
+            is Commands.Register -> requireThat {
+
+            }
+
+            is Commands.Preorder -> requireThat{
+
+
+            }
+
+            is Commands.Transfer -> requireThat {
+
+            }
+
         }
 
-
-    override fun additionalUpdateChecks(tx: LedgerTransaction) {
-
     }
+
 }
