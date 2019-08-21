@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="token-wallet.clients.main" target="1.8" />
+      <module name="token-wallet.clients.test" target="1.8" />
+      <module name="token-wallet.contracts.main" target="1.8" />
+      <module name="token-wallet.contracts.test" target="1.8" />
+      <module name="token-wallet.main" target="1.8" />
+      <module name="token-wallet.test" target="1.8" />
+      <module name="token-wallet.workflows.integrationTest" target="1.8" />
+      <module name="token-wallet.workflows.main" target="1.8" />
+      <module name="token-wallet.workflows.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

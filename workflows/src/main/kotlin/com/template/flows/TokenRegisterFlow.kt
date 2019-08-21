@@ -19,10 +19,10 @@ import net.corda.core.transactions.TransactionBuilder
 
 @StartableByRPC
 class TokenRegisterFlow(
-                private val username: String,
-                private val password: String,
-                private val quantity: List<Long>,
-                private val currency: List<String>) : Test()
+        private val username: String,
+        private val password: String,
+        private val quantity: List<Long>,
+        private val currency: List<String>) : Test()
 {
     @Suspendable
     override fun call():SignedTransaction
@@ -56,7 +56,3 @@ class TokenRegisterFlow(
         addCommand(cmd)
     }
 }
-
-
-
-
