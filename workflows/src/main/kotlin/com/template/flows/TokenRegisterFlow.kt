@@ -5,7 +5,6 @@ import com.r3.corda.lib.tokens.contracts.types.TokenType
 import com.r3.corda.lib.tokens.contracts.utilities.of
 import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.template.states.TokenWalletState
-import jdk.nashorn.internal.parser.Token
 import net.corda.core.contracts.Amount
 import net.corda.core.flows.InitiatingFlow
 import net.corda.core.flows.StartableByRPC
@@ -20,10 +19,7 @@ class TokenRegisterFlow(
                 private val password: String,
                 private val quantity: List<Long>,
                 private val currency: List<String>
-                //private val fractionDigits: List<Int>
 
-               // private val amount: Long,
-                //private val currency: String
 ) : Test() {
 
     @Suspendable
