@@ -5,7 +5,7 @@ import net.corda.core.contracts.*
 import net.corda.core.transactions.LedgerTransaction
 class TokenWalletContract : Contract {
     companion object {
-        const val ID = "com.template.contract.TokenWalletContract"
+        const val ID = "com.template.TokenWalletContract"
     }
     interface Commands : CommandData {
         class Preorder : TypeOnlyCommandData(), Commands
@@ -18,16 +18,18 @@ class TokenWalletContract : Contract {
         val command = tx.commands.requireSingleCommand<TokenWalletContract.Commands>()
         when(command.value){
             is Commands.Preorder -> requireThat {
+
+
             }
             is Commands.Register ->   requireThat {
-                "No inputs should be consumed when creating KYC." using (tx.inputs.isEmpty())
-                "Only one output state should be created" using (tx.outputs.size == 1)
-                "Output must be a KYCState" using (tx.getOutput(0) is TokenWalletState)
-                val outputRegister = tx.outputsOfType<TokenWalletState>().single()
-                "Must be signed by the Registering node" using (command.signers.toSet() == outputRegister.participants.map { it.owningKey }.toSet())
-                "Username must not be empty" using (outputRegister.username.isNotEmpty())
-                "Password must not be empty " using (outputRegister.password.isNotEmpty())
-                "Participants must only be the registering node" using (outputRegister.participants.size == 1)
+//                "No inputs should be consumed when creating KYC." using (tx.inputs.isEmpty())
+//                "Only one output state should be created" using (tx.outputs.size == 1)
+//                "Output must be a TokenWalletState" using (tx.getOutput(0) is TokenWalletState)
+//                val outputRegister = tx.outputsOfType<TokenWalletState>().single()
+//                "Must be signed by the Registering node" using (command.signers.toSet() == outputRegister.participants.map { it.owningKey }.toSet())
+//                "Username must not be empty" using (outputRegister.username.isNotEmpty())
+//                "Password must not be empty " using (outputRegister.password.isNotEmpty())
+//                "Participants must only be the registering node" using (outputRegister.participants.size == 1)
             }
             is Commands.Issue -> requireThat {
                 //                val inputValidate = tx.inputsOfType<TokenWalletState>()
@@ -38,18 +40,7 @@ class TokenWalletContract : Contract {
 //                "Input must be KYCState" using (tx.inputStates[0] is KYCState)
 //                "Output must be KYCState" using (tx.outputStates[0] is KYCState)
 //
-//                "Input Verified must be false" using (!inputValidate.single().isVerified)
-//                "Output Verified must be true" using (outputValidate.single().isVerified)
-//                val inputValidateState = inputValidate.single()
-//                val outputValidateState = inputValidate.single()
-//                "Node inputState and outputState" using (inputValidateState.node == outputValidateState.node)
-//                "Name inputState and outputState" using (inputValidateState.name == outputValidateState.name)
-//                "Age inputState and outputState" using (inputValidateState.age == outputValidateState.age)
-//                "Address inputState and outputState" using (inputValidateState.address == outputValidateState.address)
-//                "Birthday inputState and outputState" using (inputValidateState.birthDate == outputValidateState.birthDate)
-//                "Status inputState and outputState" using (inputValidateState.status == outputValidateState.status)
-//                "Religion inputState and outputState" using (inputValidateState.religion == outputValidateState.religion)
-//                "List inputState and outputState" using (inputValidateState.listOfParties == outputValidateState.listOfParties)
+//
             }
             is Commands.Transfer -> requireThat {
                 //                val inputUpdate = tx.inputsOfType<KYCState>()
