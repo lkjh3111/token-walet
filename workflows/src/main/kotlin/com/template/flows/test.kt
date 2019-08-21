@@ -49,20 +49,19 @@ abstract class Test: FlowLogic<SignedTransaction>() {
                 .addCommand(txCommand)
     }
 
+    @Suspendable
+    fun collectSignature(partySignedTx: SignedTransaction, sessions: List<FlowSession>): SignedTransaction
+            = subFlow(CollectSignaturesFlow(partySignedTx, sessions))
 
     @Suspendable
-    fun collectSignatures(partySignedTx: SignedTransaction):
-            SignedTransaction = subFlow(CollectSignaturesFlow(partySignedTx, emptyList()))
-
-    @Suspendable
-    fun recordTransactions(partySignedTx: SignedTransaction):
+    fun recordTransactionsWithoutOtherParty(partySignedTx: SignedTransaction):
             SignedTransaction = subFlow(FinalityFlow(partySignedTx, listOf()))
 
     @Suspendable
-    fun collectSignature(partySignedTx: SignedTransaction, sessions: FlowSession):
-            SignedTransaction = subFlow(CollectSignaturesFlow(partySignedTx, listOf(sessions)))
+    fun recordTransactionWithParty(partySignedTx: SignedTransaction, sessions: FlowSession):
+            SignedTransaction = subFlow(FinalityFlow(partySignedTx, sessions))
 
-    @Suspendable
-    fun recordTransaction(partySignedTx: SignedTransaction, sessions: FlowSession):
-            SignedTransaction = subFlow(FinalityFlow(partySignedTx,sessions))
+    fun stringToLinearId(string: String): UniqueIdentifier {
+        return UniqueIdentifier.fromString(string)
+    }
 }

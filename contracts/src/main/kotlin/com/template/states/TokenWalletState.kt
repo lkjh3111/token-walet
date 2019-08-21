@@ -14,6 +14,4 @@ data class TokenWalletState(val username: String,
                             val password: String,
                             val wallet: MutableList<Amount<TokenType>>,
                             override val participants: List<Party>,
-                            override val linearId: UniqueIdentifier = UniqueIdentifier()
-
-): LinearState
+                            override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState

@@ -45,12 +45,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Corda Token SDK/corda-token-sdk" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\john\Desktop\Tasks\token-wallet\workflows\src\main\kotlin\com\template\flows" />
     </key>
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> origin
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

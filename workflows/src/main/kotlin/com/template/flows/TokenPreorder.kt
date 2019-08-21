@@ -17,46 +17,22 @@ import net.corda.core.node.services.vault.QueryCriteria
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 
-@InitiatingFlow
+// User -> Platform
 @StartableByRPC
 class TokenPreorder(private val amount: Long,
                     private val currency: String,
-                    //private val issuer: Party,
-                    private val linearId: UniqueIdentifier) : Test() {
+                    private val ownerId: String) : Test() {
 
-    @Suspendable
-    override fun call():SignedTransaction {
-        val issuer = when (currency) {
-            "PHP"->stringToParty("PartyB")
-            "USD"->stringToParty("PartyC")
-            else->null
-        }
-        print(issuer)
-        val token = FiatCurrency.getInstance(currency)
-        val inputStateRef = inputStateRef(linearId)
-        val input = inputStateRef.state.data
-        val userState = TokenWalletState(input.username,input.username, input.wallet,listOf(ourIdentity,issuer!!))
-        val tx: TransactionBuilder = transaction(userState.copy(participants = userState.participants),inputStateRef , Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey,issuer.owningKey)))
-        val signedTransaction: SignedTransaction = verifyAndSign(tx)
-        val session = initiateFlow(issuer)
-        val transactionSigned: SignedTransaction = collectSignature(signedTransaction,session)
-        return recordTransaction(transactionSigned, session)
-    }
-}
-
-
-@InitiatedBy(TokenPreorder::class)
-class TokenPreorderResponder(val flowSession: FlowSession): FlowLogic<SignedTransaction>() {
     @Suspendable
     override fun call(): SignedTransaction {
-        val signedTransactionFlow = object : SignTransactionFlow(flowSession) {
-            override fun checkTransaction(stx: SignedTransaction) = requireThat {
-                val output = stx.tx.outputs.single().data
-                "This must be a transaction" using (output is TokenWalletState)
-            }
-        }
-        val txWeJustSignedId = subFlow(signedTransactionFlow)
 
-        return subFlow(ReceiveFinalityFlow(otherSideSession = flowSession, expectedTxId = txWeJustSignedId.id))
+        val token = FiatCurrency.getInstance(currency)
+        val inputStateRef = inputStateRef(stringToLinearId(ownerId))
+        val input = inputStateRef.state.data
+//        val userState = TokenWalletState(input.username,input.username, input.wallet,listOf(ourIdentity))
+        val tx: TransactionBuilder = transaction(input.copy(participants = input.participants),inputStateRef , Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey)))
+        val signedTransaction: SignedTransaction = verifyAndSign(tx)
+        return recordTransactionWithParty(signedTransaction)
     }
 }
+
