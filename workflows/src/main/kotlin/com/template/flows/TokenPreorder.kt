@@ -29,7 +29,6 @@ class TokenPreorder(private val amount: Long,
         val token = FiatCurrency.getInstance(currency)
         val inputStateRef = inputStateRef(stringToLinearId(ownerId))
         val input = inputStateRef.state.data
-//        val userState = TokenWalletState(input.username,input.username, input.wallet,listOf(ourIdentity))
         val tx: TransactionBuilder = transaction(input.copy(participants = input.participants),inputStateRef , Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey)))
         val signedTransaction: SignedTransaction = verifyAndSign(tx)
         return recordTransactionWithParty(signedTransaction)

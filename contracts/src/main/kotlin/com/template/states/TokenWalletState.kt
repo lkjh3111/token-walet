@@ -13,5 +13,6 @@ import net.corda.core.identity.Party
 data class TokenWalletState(val username: String,
                             val password: String,
                             val wallet: MutableList<Amount<TokenType>>,
+                            val ownerId: String,
                             override val participants: List<Party>,
                             override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState
