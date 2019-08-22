@@ -11,6 +11,7 @@ import net.corda.core.identity.Party
 @BelongsToContract(TokenWalletContract::class)
 data class PreorderState(val amount: Long,
                          val currency: String,
+                         val approve_request: Boolean,
                          val ownerId: String,
                          override val participants: List<Party>,
                          override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState

@@ -33,6 +33,7 @@ class TokenIssueOrderFlow(private val amount: Long,
                 amount,
                 currency,
                 stringToParty(issuer),
+                false,
                 listOf(ourIdentity, stringToParty(issuer))
         )
     }
@@ -45,8 +46,6 @@ class TokenIssueOrderFlow(private val amount: Long,
 
 }
 
-
-
 @InitiatedBy(TokenIssueOrderFlow::class)
 class TokenIssueOrderFlowResponder(val flowSession: FlowSession): FlowLogic<SignedTransaction>() {
     @Suspendable
@@ -54,7 +53,7 @@ class TokenIssueOrderFlowResponder(val flowSession: FlowSession): FlowLogic<Sign
         val signedTransactionFlow = object : SignTransactionFlow(flowSession) {
             override fun checkTransaction(stx: SignedTransaction) = requireThat {
                 val output = stx.tx.outputs.single().data
-                "This must be a transaction" using (output is TokenWalletState)
+                "This must be a transaction" using (output is IssueOrderState)
             }
         }
         val txWeJustSignedId = subFlow(signedTransactionFlow)
