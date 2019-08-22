@@ -12,6 +12,7 @@ class TokenWalletContract: Contract {
     interface Commands : CommandData {
         class Register : TypeOnlyCommandData(), Commands
         class Preorder : TypeOnlyCommandData(), Commands
+        class Issue : TypeOnlyCommandData(), Commands
         class Transfer : TypeOnlyCommandData(), Commands
     }
 
@@ -25,10 +26,13 @@ class TokenWalletContract: Contract {
 
             is Commands.Preorder -> requireThat{
 
-
             }
 
             is Commands.Transfer -> requireThat {
+
+            }
+
+            is Commands.Issue -> requireThat {
 
             }
 
