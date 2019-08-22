@@ -37,6 +37,7 @@ class TokenRegisterFlow(
                 password,
                 newWallet(),
                 listOf(ourIdentity)
+
         )
     }
 

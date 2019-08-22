@@ -34,11 +34,11 @@ class TokenIssueOrderFlow(private val linearId: UniqueIdentifier,
         val tx: TransactionBuilder = transaction(userState,inputStateRef, Command(TokenWalletContract.Commands.Transfer(), listOf(ourIdentity.owningKey,stringToParty("PartyA").owningKey)))
         val signedTransaction: SignedTransaction = verifyAndSign(tx)
         val session = initiateFlow(stringToParty("PartyA"))
-        val transactionSigned: SignedTransaction = collectSignature(signedTransaction,session)
+        val transactionSigned: SignedTransaction = collectSignature(signedTransaction, listOf(session))
 //        if(approve_request){
 //            subFlow(IssueTokens(listOf(input.requested_amount!! issuedBy ourIdentity heldBy stringToParty("PartyA"))))
 //        }
-        return recordTransaction(transactionSigned, session)
+        return recordTransactionWithParty(transactionSigned, session)
 
     }
 }

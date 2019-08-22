@@ -25,13 +25,14 @@ class TokenPreorder(private val amount: Long,
 
     @Suspendable
     override fun call(): SignedTransaction {
+        return recordTransactionsWithoutOtherParty(verifyAndSign())
 
         val token = FiatCurrency.getInstance(currency)
         val inputStateRef = inputStateRef(stringToLinearId(ownerId))
         val input = inputStateRef.state.data
         val tx: TransactionBuilder = transaction(input.copy(participants = input.participants),inputStateRef , Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey)))
         val signedTransaction: SignedTransaction = verifyAndSign(tx)
-        return recordTransactionWithParty(signedTransaction)
+        return recordTransactionsWithoutOtherParty(signedTransaction)
     }
 }
 

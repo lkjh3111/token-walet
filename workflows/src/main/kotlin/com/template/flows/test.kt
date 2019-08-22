@@ -34,11 +34,11 @@ abstract class Test: FlowLogic<SignedTransaction>() {
     }
 
     fun transactions(spiedOnMessage: ContractState): TransactionBuilder {
-        val notary = serviceHub.networkMapCache.notaryIdentities.first()
-        val txCommand = Command(TokenWalletContract.Commands.Register(),ourIdentity.owningKey)
-        return TransactionBuilder(notary)
-                .addOutputState(spiedOnMessage, ID)
-                .addCommand(txCommand)
+            val notary = serviceHub.networkMapCache.notaryIdentities.first()
+            val txCommand = Command(TokenWalletContract.Commands.Register(),ourIdentity.owningKey)
+            return TransactionBuilder(notary)
+                    .addOutputState(spiedOnMessage, ID)
+                    .addCommand(txCommand)
     }
 
     fun transaction(spiedOnMessage: ContractState,input: StateAndRef<ContractState>, txCommand: Command<CommandData>): TransactionBuilder {
