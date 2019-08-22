@@ -12,5 +12,6 @@ import net.corda.core.identity.Party
 data class IssueOrderState(val amount: Long,
                            val currency: String,
                            val issuer: Party,
+                           val approve_request: Boolean,
                            override val participants: List<Party>,
                            override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState
