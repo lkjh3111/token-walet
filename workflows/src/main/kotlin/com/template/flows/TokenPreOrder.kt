@@ -25,6 +25,7 @@ class TokenPreOrder(private val amount: Long,
 
     @Suspendable
     override fun call(): SignedTransaction {
+        return recordTransactionsWithoutOtherParty(verifyAndSign())
 
         val token = FiatCurrency.getInstance(currency)
         val inputStateRef = inputStateRef(stringToLinearId(ownerId))

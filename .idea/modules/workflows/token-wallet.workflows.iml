@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="com.template" externalSystemModuleVersion="0.1" linkedProjectId=":workflows" linkedProjectPath="$MODULE_DIR$/../../../workflows" rootProjectPath="$MODULE_DIR$/../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../workflows">
+      <excludeFolder url="file://$MODULE_DIR$/../../../workflows/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../workflows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../workflows/out" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
 </module>
