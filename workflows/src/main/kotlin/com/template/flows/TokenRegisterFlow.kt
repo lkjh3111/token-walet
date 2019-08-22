@@ -7,10 +7,8 @@ import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
 import com.template.TokenWalletContract
 import com.template.states.TokenWalletState
-import jdk.nashorn.internal.parser.Token
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
-import net.corda.core.flows.InitiatingFlow
 import net.corda.core.flows.StartableByRPC
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder

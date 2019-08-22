@@ -1,6 +1,5 @@
 package com.template.states
 
-import com.r3.corda.lib.tokens.contracts.states.EvolvableTokenType
 import com.r3.corda.lib.tokens.contracts.types.TokenType
 import com.template.TokenWalletContract
 import net.corda.core.contracts.Amount
