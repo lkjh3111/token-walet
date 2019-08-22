@@ -34,7 +34,7 @@ class TokenIssueOrderFlow(private val linearId: UniqueIdentifier,
 }
 
 @InitiatedBy(TokenIssueOrderFlow::class)
-class TokenIssueOrderFlowesponder(val flowSession: FlowSession): FlowLogic<SignedTransaction>() {
+class TokenIssueOrderFlowresponder(val flowSession: FlowSession): FlowLogic<SignedTransaction>() {
     @Suspendable
     override fun call(): SignedTransaction {
         val signedTransactionFlow = object : SignTransactionFlow(flowSession) {
