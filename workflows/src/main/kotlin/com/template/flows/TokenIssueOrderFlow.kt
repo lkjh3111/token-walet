@@ -1,19 +1,9 @@
 package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
-import com.r3.corda.lib.tokens.contracts.states.FungibleToken
-import com.r3.corda.lib.tokens.contracts.types.IssuedTokenType
-import com.r3.corda.lib.tokens.contracts.types.TokenType
-import com.r3.corda.lib.tokens.contracts.utilities.heldBy
-import com.r3.corda.lib.tokens.contracts.utilities.issuedBy
-import com.r3.corda.lib.tokens.contracts.utilities.of
-import com.r3.corda.lib.tokens.money.FiatCurrency
-import com.r3.corda.lib.tokens.workflows.flows.rpc.IssueTokens
 import com.template.TokenWalletContract
 import com.template.states.TokenWalletState
-import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
-import net.corda.core.contracts.Requirements.using
 import net.corda.core.contracts.UniqueIdentifier
 import net.corda.core.contracts.requireThat
 import net.corda.core.flows.*
@@ -34,11 +24,11 @@ class TokenIssueOrderFlow(private val linearId: UniqueIdentifier,
         val tx: TransactionBuilder = transaction(userState,inputStateRef, Command(TokenWalletContract.Commands.Transfer(), listOf(ourIdentity.owningKey,stringToParty("PartyA").owningKey)))
         val signedTransaction: SignedTransaction = verifyAndSign(tx)
         val session = initiateFlow(stringToParty("PartyA"))
-        val transactionSigned: SignedTransaction = collectSignature(signedTransaction,session)
+        val transactionSigned: SignedTransaction = collectSignature(signedTransaction, listOf(session))
 //        if(approve_request){
 //            subFlow(IssueTokens(listOf(input.requested_amount!! issuedBy ourIdentity heldBy stringToParty("PartyA"))))
 //        }
-        return recordTransaction(transactionSigned, session)
+        return recordTransactionWithParty(transactionSigned, session)
 
     }
 }
