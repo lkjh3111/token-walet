@@ -27,7 +27,7 @@ class TokenOrderIssuerFlow(private val amount: Long,
         }
 
         val signedTransaction: SignedTransaction = verifyAndSign(issue(issuer!!))
-        val session = initiateFlow(issuer!!)
+        val session = initiateFlow(issuer)
         val transactionSigned: SignedTransaction = collectSignature(signedTransaction, listOf(session))
         return recordTransactionWithParty(transactionSigned, session)
 
@@ -44,7 +44,7 @@ class TokenOrderIssuerFlow(private val amount: Long,
                 amount,
                 currency,
                 false,
-                listOf(ourIdentity, issuer)
+                listOf(issuer)
         )
     }
 

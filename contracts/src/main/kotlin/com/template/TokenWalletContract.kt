@@ -17,6 +17,7 @@ class TokenWalletContract: Contract {
         class Issue : TypeOnlyCommandData(), Commands
         class Transfer : TypeOnlyCommandData(), Commands
         class Move : TypeOnlyCommandData(), Commands
+        class Accept : TypeOnlyCommandData(), Commands
     }
 
     override fun verify(tx: LedgerTransaction) {
@@ -53,6 +54,9 @@ class TokenWalletContract: Contract {
 
             }
             is Commands.Move -> requireThat {
+
+            }
+            is Commands.Accept -> requireThat {
 
             }
 
