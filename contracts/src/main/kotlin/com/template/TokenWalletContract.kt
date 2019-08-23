@@ -47,12 +47,12 @@ class TokenWalletContract: Contract {
 
 //
                 "A transaction should only consume one input state." using (tx.inputs.size == 1)
-                val user = tx.groupStates<IssueOrderState, UniqueIdentifier> { it.linearId }.single()
-                "There must be one input User." using (user.inputs.size == 1)
+//                val user = tx.groupStates<IssueOrderState, UniqueIdentifier> { it.linearId }.single()
+//                "There must be one input User." using (user.inputs.size == 1)
                 val output = tx.outputStates.single() as IssueOrderState
-                "User is the only signer." using
-                        (command.signers.toSet() == output.participants.map { it.owningKey  }.toSet())
-//                "An  transaction should only create one output state." using (tx.outputs.size == 1)
+//                "User is the only signer." using
+//                        (command.signers.toSet() == output.participants.map { it.owningKey  }.toSet())
+                "An  transaction should only create one output state." using (tx.outputs.size == 1)
 //                val input = tx.inputStates
 //                val output = tx.outputStates.single() as TokenWalletState
 //                "Only the lender property may change." using (input == output.withNewLender(input.lender))
