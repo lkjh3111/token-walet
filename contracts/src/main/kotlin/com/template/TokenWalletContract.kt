@@ -1,6 +1,7 @@
 package com.template
 
 import com.r3.corda.lib.tokens.contracts.EvolvableTokenContract
+import com.template.states.IssueOrderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.*
 import net.corda.core.transactions.LedgerTransaction
@@ -36,6 +37,15 @@ class TokenWalletContract: Contract {
             }
 
             is Commands.Transfer -> requireThat {
+//                "A transaction should only consume one input state." using (tx.inputs.size == 1)
+//                "An  transaction should only create one output state." using (tx.outputs.size == 1)
+                val input = tx.inputStates.single() as IssueOrderState
+                val output = tx.outputStates.single() as IssueOrderState
+//                "Only the lender property may change." using (input == output.withNewLender(input.lender))
+//                "The lender property must change in a transfer." using (input.lender != output.lender)
+//                "The Issuer and Platform only must sign an IOU transfer transaction" using
+//                        (command.signers.toSet() == (input.participants.map { it.owningKey }.toSet() `union`
+//                                output.participants.map { it.owningKey }.toSet()))
 
             }
 
