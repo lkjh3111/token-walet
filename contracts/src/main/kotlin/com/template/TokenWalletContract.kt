@@ -39,11 +39,11 @@ class TokenWalletContract: Contract {
             is Commands.Transfer -> requireThat {
 //                "A transaction should only consume one input state." using (tx.inputs.size == 1)
 //                "An  transaction should only create one output state." using (tx.outputs.size == 1)
-                val input = tx.inputStates.single() as IssueOrderState
-                val output = tx.outputStates.single() as IssueOrderState
+//                val input = tx.inputStates
+//                val output = tx.outputStates.single() as TokenWalletState
 //                "Only the lender property may change." using (input == output.withNewLender(input.lender))
 //                "The lender property must change in a transfer." using (input.lender != output.lender)
-//                "The Issuer and Platform only must sign an IOU transfer transaction" using
+//                "The Issuer and Platform only must sign a transaction" using
 //                        (command.signers.toSet() == (input.participants.map { it.owningKey }.toSet() `union`
 //                                output.participants.map { it.owningKey }.toSet()))
 
