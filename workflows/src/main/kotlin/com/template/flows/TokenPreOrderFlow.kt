@@ -48,6 +48,7 @@ class TokenPreOrderFlow(
     }
     private fun preorder() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
         val cmd = Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey))
+        addInputState(inputStateAndRef (stringToLinearId(ownerId)))
         addOutputState(outState())
         addCommand(cmd)
     }
