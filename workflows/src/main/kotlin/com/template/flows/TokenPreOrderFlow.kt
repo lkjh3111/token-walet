@@ -27,28 +27,21 @@ class TokenPreOrderFlow(
         return recordTransactionsWithoutOtherParty(verifyAndSign(preorder()))
     }
 
-    private fun inputStateAndRef(id: UniqueIdentifier): StateAndRef<TokenWalletState> {
-        val criteria = QueryCriteria.LinearStateQueryCriteria(linearId = listOf(id))
-        return serviceHub.vaultService.queryBy<TokenWalletState>(criteria = criteria).states.single()
-    }
 
     private fun outState(): PreorderState
     {
-        val inputStateRef = inputStateAndRef (stringToLinearId(ownerId))
-        val input = inputStateRef.state.data
         return PreorderState(
 
                 amount,
                 currency,
                 false,
-                input.linearId.toString(),
+                ownerId,
                 listOf(ourIdentity)
 
         )
     }
     private fun preorder() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
         val cmd = Command(TokenWalletContract.Commands.Preorder(), listOf(ourIdentity.owningKey))
-        addInputState(inputStateAndRef (stringToLinearId(ownerId)))
         addOutputState(outState())
         addCommand(cmd)
     }

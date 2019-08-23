@@ -17,6 +17,7 @@ class TokenWalletContract: Contract {
         class Issue : TypeOnlyCommandData(), Commands
         class Transfer : TypeOnlyCommandData(), Commands
         class Move : TypeOnlyCommandData(), Commands
+        class Accept : TypeOnlyCommandData(), Commands
     }
 
     override fun verify(tx: LedgerTransaction) {
@@ -27,15 +28,17 @@ class TokenWalletContract: Contract {
                 "Registering should not consume registration" using (tx.inputs.isEmpty())
                 "Only one output state should be created" using (tx.outputs.size == 1)
                 val outputRegister = tx.outputsOfType<TokenWalletState>().single()
+                val y = tx.outputStates
                 val user = tx.outputStates.single() as TokenWalletState
                 "Must be signed by the Registering node" using (command.signers.toSet() == outputRegister.participants.map { it.owningKey }.toSet())
                 "Password must contain at least 6 characters with at least one Uppercase, at least one number" using (outputRegister.password.length>=6)
                 "Amount must be greater than 0" using (user.wallet.first().quantity>0)
                 "Amount must be greater than 0" using (user.wallet.last().quantity>0)
-//                "Password must contain at least 6 characters with with at least one Uppercase, at least one number" using (outputRegister.password.)
+//
         }
 
             is Commands.Preorder -> requireThat{
+
 
 
             }
@@ -44,6 +47,11 @@ class TokenWalletContract: Contract {
 
 //
                 "A transaction should only consume one input state." using (tx.inputs.size == 1)
+                val user = tx.groupStates<IssueOrderState, UniqueIdentifier> { it.linearId }.single()
+                "There must be one input User." using (user.inputs.size == 1)
+                val output = tx.outputStates.single() as IssueOrderState
+                "User is the only signer." using
+                        (command.signers.toSet() == output.participants.map { it.owningKey  }.toSet())
 //                "An  transaction should only create one output state." using (tx.outputs.size == 1)
 //                val input = tx.inputStates
 //                val output = tx.outputStates.single() as TokenWalletState
@@ -59,6 +67,9 @@ class TokenWalletContract: Contract {
 
             }
             is Commands.Move -> requireThat {
+
+            }
+            is Commands.Accept -> requireThat {
 
             }
 
