@@ -40,7 +40,7 @@ class TokenWalletContract: Contract {
 
             is Commands.Preorder -> requireThat{
                 "There must be only one Fungible Token" using (tx.outputs.size==1)
-                "No inputs should consumed when pre-ordering" using (tx.inputs.isEmpty())
+                "No inputs should be consumed when pre-ordering" using (tx.inputs.isEmpty())
                 val output = tx.outputStates.single() as PreorderState
                 "The user and the platform are the only signers in a transaction"
                 (command.signers.toSet() == output.participants.map { it.owningKey  }.toSet())
@@ -81,6 +81,8 @@ class TokenWalletContract: Contract {
 
             }
             is Commands.Move -> requireThat {
+                "Sharing info should not consume the info." using (tx.inputs.isEmpty())
+                "Sharing info should create one copy of the request info." using (tx.outputs.size == 1)
 
 
             }
