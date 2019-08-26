@@ -34,7 +34,6 @@ class TokenPreOrderFlow(
 
                 amount,
                 currency,
-                false,
                 ownerId,
                 listOf(ourIdentity)
 

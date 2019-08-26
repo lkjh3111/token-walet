@@ -1,9 +1,11 @@
 package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
+import com.r3.corda.lib.tokens.contracts.types.TokenType
 import com.r3.corda.lib.tokens.contracts.utilities.of
 import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.flows.rpc.MoveFungibleTokens
+import com.r3.corda.lib.tokens.workflows.flows.rpc.RedeemFungibleTokens
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
 import com.template.TokenWalletContract
 import com.template.states.PreorderState
@@ -19,22 +21,18 @@ import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 
 @StartableByRPC
-class AcceptPreOrderFlow(private val approve_request: Boolean,
-                         private val txId: String) : Test()
+class AcceptPreOrderFlow(private val txId: String) : Test()
 {
     @Suspendable
     override fun call(): SignedTransaction
     {
-        val inputStateRef = inputStateAndRef (stringToLinearId(txId))
-        val input = inputStateRef.state.data
-        val inputStateRefe = inputStateRefe(stringToLinearId(input.ownerId))
-        val input1 = inputStateRefe.state.data
-
+        val input = inputStateAndRef (stringToLinearId(txId)).state.data
         val token = FiatCurrency.getInstance(input.currency)
-        val search = input1.wallet.filter {input1.wallet.any{it == token}}
-        print(search)
-        if (approve_request){
-            subFlow(MoveFungibleTokens(input.amount of token,  ourIdentity))
+        if (input.currency == "PHP"){
+            subFlow(RedeemFungibleTokens(input.amount of token,  stringToParty("BSP")))
+        }
+        if (input.currency == "USD"){
+            subFlow(RedeemFungibleTokens(input.amount of token,  stringToParty("USB")))
         }
         return recordTransactionsWithoutOtherParty(verifyAndSign(accept()))
     }
@@ -44,29 +42,15 @@ class AcceptPreOrderFlow(private val approve_request: Boolean,
         return serviceHub.vaultService.queryBy<PreorderState>(criteria = criteria).states.single()
     }
 
-    private fun inputStateRefe(id: UniqueIdentifier): StateAndRef<TokenWalletState> {
+    private fun inputStateRef(id: UniqueIdentifier): StateAndRef<TokenWalletState> {
         val criteria = QueryCriteria.LinearStateQueryCriteria(linearId = listOf(id))
         return serviceHub.vaultService.queryBy<TokenWalletState>(criteria = criteria).states.single()
     }
 
-    private fun outState(): PreorderState
+    private fun outState(): TokenWalletState
     {
-        val inputStateRef = inputStateAndRef (stringToLinearId(txId))
-        val input = inputStateRef.state.data
-        return PreorderState(
-                input.amount,
-                input.currency,
-                approve_request,
-                input.ownerId,
-                listOf(ourIdentity)
-        )
-    }
-    private fun outState2(): TokenWalletState
-    {
-        val inputStateRef = inputStateAndRef (stringToLinearId(txId))
-        val input = inputStateRef.state.data
-        val inputStateRefe = inputStateRefe(stringToLinearId(input.ownerId))
-        val input1 = inputStateRefe.state.data
+        val input = inputStateAndRef (stringToLinearId(txId)).state.data
+        val input1 = inputStateRef(stringToLinearId(input.ownerId)).state.data
         return TokenWalletState(
                input1.username,
                 input1.password,
@@ -75,21 +59,30 @@ class AcceptPreOrderFlow(private val approve_request: Boolean,
         )
     }
     private fun accept() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val participants = if (approve_request){
-            listOf()
-        }else {
-            listOf(ourIdentity)
-        }
-        val inputStateRef = inputStateAndRef (stringToLinearId(txId))
-        val input = inputStateRef.state.data
-        val inputStateRefe = inputStateRefe(stringToLinearId(input.ownerId))
-        val input1 = inputStateRefe.state.data
+        val input = inputStateAndRef (stringToLinearId(txId)).state.data
+        val input1 = inputStateRef(stringToLinearId(input.ownerId)).state.data
+        val token = FiatCurrency.getInstance(input.currency)
+        val wallet = input1.wallet
+        val new = wallet.find{ l -> l.token.tokenIdentifier == input.currency}?.plus(input.amount of token)
+        print (new)
         val cmd = Command(TokenWalletContract.Commands.Accept(), listOf(ourIdentity.owningKey))
         addInputState(inputStateAndRef (stringToLinearId(txId)))
-        addInputState(inputStateRefe(stringToLinearId(input.ownerId)))
-        addOutputState(outState().copy(participants = participants))
-        addOutputState(outState2())
+        addInputState(inputStateRef(stringToLinearId(input.ownerId)))
+        addOutputState(outState().copy(wallet = newWallet()))
         addCommand(cmd)
+    }
+    private fun newWallet(): MutableList<Amount<TokenType>>
+    {
+        val input = inputStateAndRef (stringToLinearId(txId)).state.data
+        val input1 = inputStateRef(stringToLinearId(input.ownerId)).state.data
+        val token = FiatCurrency.getInstance(input.currency)
+        val wallet = input1.wallet.toMutableList()
+        val wal = input1.wallet.find{ l -> l.token.tokenIdentifier == input.currency}
+        val new = wal?.plus(input.amount of token)
+        val index = input1.wallet.indexOf(wal)
+        wallet.removeAt(index)
+        wallet.add(index,new!!)
+        return wallet
     }
 
 

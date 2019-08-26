@@ -20,9 +20,9 @@ class TokenOrderIssuerFlow(private val amount: Long,
 
     @Suspendable
     override fun call(): SignedTransaction {
-        val issuer = when {
-            currency == "PHP" -> stringToParty("BSP")
-            currency == "USD" -> stringToParty("USB")
+        val issuer = when (currency) {
+            "PHP" -> stringToParty("BSP")
+            "USD" -> stringToParty("USB")
             else -> null
         }
 
@@ -44,7 +44,7 @@ class TokenOrderIssuerFlow(private val amount: Long,
                 amount,
                 currency,
                 false,
-                listOf(issuer)
+                listOf(ourIdentity, issuer)
         )
     }
 
