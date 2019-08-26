@@ -2,6 +2,7 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.contracts.types.TokenType
+import com.r3.corda.lib.tokens.contracts.utilities.amount
 import com.r3.corda.lib.tokens.contracts.utilities.of
 import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
@@ -18,8 +19,8 @@ import net.corda.core.transactions.TransactionBuilder
 class TokenRegisterFlow(
         private val username: String,
         private val password: String,
-        private val quantity: List<Long>,
-        private val currency: List<String>) : Test()
+        private var quantity: List<Long>,
+        private var currency: List<String>) : Test()
 {
     @Suspendable
     override fun call():SignedTransaction

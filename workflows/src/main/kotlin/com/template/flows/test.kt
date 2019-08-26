@@ -23,10 +23,10 @@ abstract class Test: FlowLogic<SignedTransaction>() {
 
     }
 
-    fun inputStateRef(id: UniqueIdentifier): StateAndRef<TokenWalletState> {
-        val criteria = QueryCriteria.LinearStateQueryCriteria(linearId = listOf(id))
-        return serviceHub.vaultService.queryBy<TokenWalletState>(criteria = criteria).states.single()
-    }
+//    fun inputStateRef(id: UniqueIdentifier): StateAndRef<TokenWalletState> {
+//        val criteria = QueryCriteria.LinearStateQueryCriteria(linearId = listOf(id))
+//        return serviceHub.vaultService.queryBy<TokenWalletState>(criteria = criteria).states.single()
+//    }
 
     fun verifyAndSign(tx: TransactionBuilder): SignedTransaction {
         tx.verify(serviceHub)
