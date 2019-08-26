@@ -2,6 +2,7 @@ package com.template
 
 import com.r3.corda.lib.tokens.contracts.EvolvableTokenContract
 import com.template.states.IssueOrderState
+import com.template.states.PreorderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.*
 import net.corda.core.transactions.LedgerTransaction
@@ -38,7 +39,12 @@ class TokenWalletContract: Contract {
         }
 
             is Commands.Preorder -> requireThat{
-
+                "There must be only one Fungible Token" using (tx.outputs.size==1)
+                "No inputs should consumed when pre-ordering" using (tx.inputs.isEmpty())
+                val order = tx.outputStates.single() as PreorderState
+                "The user and the platform are the only signers in a transaction"
+                (command.signers.toSet() == order.participants.map { it.owningKey  }.toSet())
+                "The pre-order amount token must be greater than 1" using (order.amount>0)
 
 
             }
@@ -65,11 +71,15 @@ class TokenWalletContract: Contract {
 
             is Commands.Issue -> requireThat {
 
+
             }
             is Commands.Move -> requireThat {
 
+
             }
             is Commands.Accept -> requireThat {
+
+
 
             }
 
