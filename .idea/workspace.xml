@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterDir="false" />
@@ -21,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -41,10 +41,10 @@ class TokenWalletContract: Contract {
             is Commands.Preorder -> requireThat{
                 "There must be only one Fungible Token" using (tx.outputs.size==1)
                 "No inputs should consumed when pre-ordering" using (tx.inputs.isEmpty())
-                val order = tx.outputStates.single() as PreorderState
+                val output = tx.outputStates.single() as PreorderState
                 "The user and the platform are the only signers in a transaction"
-                (command.signers.toSet() == order.participants.map { it.owningKey  }.toSet())
-                "The pre-order amount token must be greater than 1" using (order.amount>0)
+                (command.signers.toSet() == output.participants.map { it.owningKey  }.toSet())
+                "The pre-order token must be greater than 0" using (output.amount>0)
 
 
             }
@@ -70,6 +70,13 @@ class TokenWalletContract: Contract {
             }
 
             is Commands.Issue -> requireThat {
+                "Issuing order should not consume the transaction" using(tx.inputs.isEmpty())
+                "There must be one order transaction" using(tx.outputs.size==1)
+                val order = tx.outputStates.single() as IssueOrderState
+                "The Ordered Token must be greater than " using(order.amount>0)
+//                "Platform and the Issuer are the signers in this transaction" using (command.signers.toSet() == order.participants.map { it.owningKey  }.toSet())
+
+
 
 
             }
