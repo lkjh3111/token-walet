@@ -58,8 +58,8 @@ class ExchangeRateFlow(
         print (wal!!.quantity.toBigDecimal())
         print (" ")
         val newValue = when (convert_from) {
-            "PHP" -> ((wal.quantity.toLong())*0.01).div(getExchangeRate().toBigDecimal())
-            "USD" -> ((wal.quantity.toBigDecimal())*0.01).times(getExchangeRate().toBigDecimal())
+            "PHP" -> ((wal.quantity)*0.01).div(getExchangeRate())
+            "USD" -> ((wal.quantity)*0.01).times(getExchangeRate())
             else -> null
         }
         print (newValue)
