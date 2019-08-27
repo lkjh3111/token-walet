@@ -17,8 +17,8 @@ class TokenWalletContract: Contract {
         class Preorder : TypeOnlyCommandData(), Commands
         class Issue : TypeOnlyCommandData(), Commands
         class Transfer : TypeOnlyCommandData(), Commands
-        class Move : TypeOnlyCommandData(), Commands
         class Accept : TypeOnlyCommandData(), Commands
+        class Exchange : TypeOnlyCommandData(), Commands
     }
 
     override fun verify(tx: LedgerTransaction) {
@@ -76,17 +76,18 @@ class TokenWalletContract: Contract {
                 "The Ordered Token must be greater than " using(order.amount>0)
 //                "Platform and the Issuer are the signers in this transaction" using (command.signers.toSet() == order.participants.map { it.owningKey  }.toSet())
 
-
-
-
             }
-            is Commands.Move -> requireThat {
-                "Sharing info should not consume the info." using (tx.inputs.isEmpty())
-                "Sharing info should create one copy of the request info." using (tx.outputs.size == 1)
 
 
-            }
+
+
             is Commands.Accept -> requireThat {
+
+
+
+            }
+
+            is Commands.Exchange -> requireThat {
 
 
 
