@@ -55,7 +55,8 @@ class AcceptPreOrderFlow(private val txId: String) : Test()
                input1.username,
                 input1.password,
                 input1.wallet,
-                input1.participants
+                input1.participants,
+                input1.linearId
         )
     }
     private fun accept() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {

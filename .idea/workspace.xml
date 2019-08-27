@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e2c3db-ca55-478f-ba43-66907a25db51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/ExchangeRateFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/build/kotlin/workflows01jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/build/kotlin/workflows01jar-classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +52,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>parameters</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1PwFS1Av2iiQLHKKU3S1nqzsqyw" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/exchange-rates-oracle-master/exchange-rates-oracle-master" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,42 +112,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a0e2c3db-ca55-478f-ba43-66907a25db51" name="Default Changelist" comment="" />
+      <changelist id="7374e55e-8d69-4b67-b4f1-44091b2a31af" name="Default Changelist" comment="" />
       <created>1566529508130</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566529508130</updated>
     </task>
-    <task id="LOCAL-00001" summary="Merge branch 'dev.staging' of https://github.com/lkjh3111/token-wallet into dev.contracts&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.4.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.lock&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.idea/modules/clients/token-wallet.clients.main.iml&#10;#&#9;.idea/modules/clients/token-wallet.clients.test.iml&#10;#&#9;.idea/modules/token-wallet.main.iml&#10;#&#9;.idea/modules/token-wallet.test.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.integrationTest.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.main.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.test.iml&#10;#&#9;.idea/workspace.xml&#10;#&#9;build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/certificates/nodekeystore.jks&#10;#&#9;build/nodes/Notary/certificates/sslkeystore.jks&#10;#&#9;build/nodes/Notary/certificates/truststore.jks&#10;#&#9;build/nodes/Notary/network-parameters&#10;#&#9;build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/persistence.mv.db&#10;#&#9;build/nodes/Notary/persistence.trace.db&#10;#&#9;build/nodes/Notary/process-id&#10;#&#9;contracts/build/kotlin/contracts01jar-classes.txt&#10;#&#9;workflows/build/kotlin/workflows01jar-classes.txt">
-      <created>1566875624705</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1566875624705</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'dev.staging' of https://github.com/lkjh3111/token-wallet into dev.contracts&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.4.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.lock&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.idea/modules/clients/token-wallet.clients.main.iml&#10;#&#9;.idea/modules/clients/token-wallet.clients.test.iml&#10;#&#9;.idea/modules/token-wallet.main.iml&#10;#&#9;.idea/modules/token-wallet.test.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.integrationTest.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.main.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.test.iml&#10;#&#9;.idea/workspace.xml&#10;#&#9;build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/certificates/nodekeystore.jks&#10;#&#9;build/nodes/Notary/certificates/sslkeystore.jks&#10;#&#9;build/nodes/Notary/certificates/truststore.jks&#10;#&#9;build/nodes/Notary/network-parameters&#10;#&#9;build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/persistence.mv.db&#10;#&#9;build/nodes/Notary/persistence.trace.db&#10;#&#9;build/nodes/Notary/process-id&#10;#&#9;contracts/build/kotlin/contracts01jar-classes.txt&#10;#&#9;workflows/build/kotlin/workflows01jar-classes.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'dev.staging' of https://github.com/lkjh3111/token-wallet into dev.contracts&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.4.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.4.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.4.1/taskHistory/taskHistory.lock&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.idea/modules/clients/token-wallet.clients.main.iml&#10;#&#9;.idea/modules/clients/token-wallet.clients.test.iml&#10;#&#9;.idea/modules/token-wallet.main.iml&#10;#&#9;.idea/modules/token-wallet.test.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.integrationTest.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.main.iml&#10;#&#9;.idea/modules/workflows/token-wallet.workflows.test.iml&#10;#&#9;.idea/workspace.xml&#10;#&#9;build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/certificates/nodekeystore.jks&#10;#&#9;build/nodes/Notary/certificates/sslkeystore.jks&#10;#&#9;build/nodes/Notary/certificates/truststore.jks&#10;#&#9;build/nodes/Notary/network-parameters&#10;#&#9;build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE&#10;#&#9;build/nodes/Notary/persistence.mv.db&#10;#&#9;build/nodes/Notary/persistence.trace.db&#10;#&#9;build/nodes/Notary/process-id&#10;#&#9;contracts/build/kotlin/contracts01jar-classes.txt&#10;#&#9;workflows/build/kotlin/workflows01jar-classes.txt" />
-  </component>
   <component name="WindowStateProjectService">
-    <state width="223" height="238" key="Git.Branch.Popup" />
-    <state width="223" height="238" key="Git.Branch.Popup/1366.768" />
-    <state width="223" height="238" key="Git.Branch.Popup@1366.768" />
+    <state width="227" height="242" key="Git.Branch.Popup" />
+    <state width="227" height="242" key="Git.Branch.Popup/1366.768" />
+    <state width="227" height="242" key="Git.Branch.Popup@1366.768" />
   </component>
 </project>

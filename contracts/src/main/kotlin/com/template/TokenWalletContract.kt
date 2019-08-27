@@ -89,6 +89,9 @@ class TokenWalletContract: Contract {
 
 
             }
+            is Commands.Exchange -> requireThat {
+
+            }
 
         }
 
