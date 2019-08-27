@@ -50,17 +50,16 @@ class ExchangeRateFlow(
         print (getExchangeRate())
         print (" ")
         val input = inputStateAndRef (stringToLinearId(ownerId)).state.data
-        //val token = FiatCurrency.getInstance(convert_from)
+        val token = FiatCurrency.getInstance(convert_from)
         val wallet = input.wallet.toMutableList()
         val wal = input.wallet.find{ l -> l.token.tokenIdentifier == convert_from}
         val wal2 = input.wallet.find{ l -> l.token.tokenIdentifier == to}
-        //Amount.fromDecimal()
 
-        print (wal!!.quantity)
+        print (wal!!.quantity.toBigDecimal())
         print (" ")
         val newValue = when (convert_from) {
-            "PHP" -> ((wal.quantity.toDouble())*0.01) / getExchangeRate().toLong()
-            "USD" -> ((wal.quantity.toDouble())*0.01) * getExchangeRate().toLong()
+            "PHP" -> ((wal.quantity.toLong())*0.01).div(getExchangeRate().toBigDecimal())
+            "USD" -> ((wal.quantity.toBigDecimal())*0.01).times(getExchangeRate().toBigDecimal())
             else -> null
         }
         print (newValue)
@@ -76,11 +75,12 @@ class ExchangeRateFlow(
         print (" ")
         val sub = wal.minus(wal)
         val index = input.wallet.indexOf(wal)
-        wallet.removeAt(index)
-        wallet.add(index,new!!)
         val index2 = input.wallet.indexOf(wal2)
         wallet.removeAt(index2)
-        wallet.add(index2,sub)
+        wallet.add(index2,new!!)
+
+        wallet.removeAt(index)
+        wallet.add(index,sub)
         return wallet
     }
 
