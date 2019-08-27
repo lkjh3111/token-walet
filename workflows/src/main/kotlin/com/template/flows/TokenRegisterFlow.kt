@@ -13,6 +13,8 @@ import net.corda.core.contracts.Command
 import net.corda.core.flows.StartableByRPC
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
+import java.io.IOException
+import java.net.URL
 
 
 @StartableByRPC
@@ -54,4 +56,8 @@ class TokenRegisterFlow(
         addOutputState(outState())
         addCommand(cmd)
     }
+
+
+
+
 }
