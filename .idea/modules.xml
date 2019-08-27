@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/token-wallet-api.iml" filepath="$PROJECT_DIR$/.idea/token-wallet-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.test.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/token-wallet-api.clients.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet-api.contracts.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/token-wallet-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/token-wallet-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/token-wallet-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/token-wallet-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet-api.workflows.test.iml" />
+    </modules>
+  </component>
+</project>
