@@ -82,7 +82,6 @@ class TokenWalletContract: Contract {
             is Commands.Accept -> requireThat {
 
 
-
             }
 
             is Commands.Exchange -> requireThat {
