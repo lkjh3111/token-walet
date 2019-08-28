@@ -37,7 +37,6 @@ class TokenRegisterFlow(
                 password,
                 newWallet(),
                 listOf(ourIdentity)
-
         )
     }
 
@@ -56,8 +55,4 @@ class TokenRegisterFlow(
         addOutputState(outState())
         addCommand(cmd)
     }
-
-
-
-
 }
