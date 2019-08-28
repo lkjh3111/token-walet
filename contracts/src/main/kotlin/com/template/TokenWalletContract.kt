@@ -51,19 +51,9 @@ class TokenWalletContract: Contract {
             }
 
             is Commands.Transfer -> requireThat {
-
-//
                 "A transaction should only consume one input state." using (tx.inputs.size == 1)
-//                val user = tx.groupStates<IssueOrderState, UniqueIdentifier> { it.linearId }.single()
                 val output = tx.outputStates.single() as IssueOrderState
                 "An  transaction should only create one output state." using (tx.outputs.size == 1)
-//                val input = tx.inputStates
-//                val output = tx.outputStates.single() as TokenWalletState
-//                "Only the lender property may change." using (input == output.withNewLender(input.lender))
-//                "The lender property must change in a transfer." using (input.lender != output.lender)
-//                "The Issuer and Platform only must sign a transaction" using
-//                        (command.signers.toSet() == (input.participants.map { it.owningKey }.toSet() `union`
-//                                output.participants.map { it.owningKey }.toSet()))
 
             }
 
@@ -72,7 +62,7 @@ class TokenWalletContract: Contract {
                 "There must be one order transaction" using(tx.outputs.size==1)
                 val order = tx.outputStates.single() as IssueOrderState
                 "The Ordered Token must be greater than " using(order.amount>0)
-//                "Platform and the Issuer are the signers in this transaction" using (command.signers.toSet() == order.participants.map { it.owningKey  }.toSet())
+
 
             }
 
@@ -93,7 +83,6 @@ class TokenWalletContract: Contract {
             "When Exchanging it should consume the transaction" using (tx.inputs.size==1)
             "Owner is the only signer" using (command.signers.toSet() == k.participants.map { it.owningKey }.toSet())
             "The amount to convert must be greater than 0" using (r.wallet.first().quantity>0)
-            "The amount to convert must be greater than 0" using (r.wallet.last().quantity>0)
 
 
 
