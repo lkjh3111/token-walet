@@ -10,7 +10,7 @@ data class TokenWalletModel (
         val username: String,
         val password: String,
         val wallet: String,
-        val linearId: UniqueIdentifier
+        val linearId: String
 )
 
 data class Register @JsonCreator constructor(
