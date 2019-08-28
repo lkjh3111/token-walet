@@ -1,4 +1,4 @@
-package com.template.controller
+package com.template.webserver.controller
 
 import com.template.flows.AcceptPreOrderFlow
 import com.template.flows.ExchangeRateFlow

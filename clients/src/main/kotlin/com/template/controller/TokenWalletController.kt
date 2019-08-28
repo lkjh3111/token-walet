@@ -1,4 +1,4 @@
-package com.template.controller
+package com.template.webserver.controller
 
 import com.template.flows.TokenPreOrderFlow
 import com.template.flows.TokenRegisterFlow
@@ -6,6 +6,8 @@ import com.template.states.TokenWalletState
 import com.template.webserver.connection.NodeRPCConnection
 import com.template.webserver.models.PreOrder
 import com.template.webserver.models.Register
+import com.template.webserver.models.TokenWalletModel
+import net.corda.core.messaging.vaultQueryBy
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

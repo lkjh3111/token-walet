@@ -1,4 +1,4 @@
-package com.template.models
+package com.template.webserver.models
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import net.corda.core.contracts.UniqueIdentifier
@@ -8,7 +8,7 @@ data class PreorderModel (
         val amount: Long,
         val currency: String,
         val ownerId: String,
-        val participants: List<Party>,
+        val participants: String,
         val linearId: UniqueIdentifier
 )
 
@@ -17,8 +17,8 @@ data class AcceptPreOrder @JsonCreator constructor(
         val txId: String
 )
 
-data class ExhangeRate (
-        private val convert_from: String,
-        private val to: String,
-        private val ownerId: String
+data class ExchangeRate (
+        val convert_from: String,
+        val to: String,
+        val ownerId: String
 )
