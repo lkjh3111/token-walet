@@ -14,6 +14,10 @@ import net.corda.core.transactions.SignedTransaction
 class SelfIssueTokenFlow(private val amount: Long,
                      private val currency: String) : Test() {
     @Suspendable
+
+
+
+
     @Throws(FlowException::class)
     override fun call(): SignedTransaction {
         val token = FiatCurrency.getInstance(currency)

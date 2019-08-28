@@ -14,11 +14,12 @@ class TokenWalletContract: Contract {
 
     interface Commands : CommandData {
         class Register : TypeOnlyCommandData(), Commands
-        class Preorder : TypeOnlyCommandData(), Commands
+        class PreOrder : TypeOnlyCommandData(), Commands
         class Issue : TypeOnlyCommandData(), Commands
         class Transfer : TypeOnlyCommandData(), Commands
         class Accept : TypeOnlyCommandData(), Commands
         class Exchange : TypeOnlyCommandData(), Commands
+        class RequestAccess : TypeOnlyCommandData(), Commands
     }
 
     override fun verify(tx: LedgerTransaction) {
@@ -38,7 +39,7 @@ class TokenWalletContract: Contract {
 //
         }
 
-            is Commands.Preorder -> requireThat{
+            is Commands.PreOrder -> requireThat{
                 "There must be only one Fungible Token" using (tx.outputs.size==1)
                 "No inputs should be consumed when pre-ordering" using (tx.inputs.isEmpty())
                 val output = tx.outputStates.single() as PreorderState
@@ -85,11 +86,22 @@ class TokenWalletContract: Contract {
             }
 
             is Commands.Exchange -> requireThat {
+            val k =tx.outputStates.single() as TokenWalletState
+            val r =tx.inputStates.single() as TokenWalletState
+            val input = tx.groupStates<TokenWalletState, UniqueIdentifier> { it.linearId }.single()
+            "There must be a transaction" using (input.inputs.size == 1)
+            "When Exchanging it should create a transaction" using (tx.outputs.size==1)
+            "When Exchanging it should consume the transaction" using (tx.inputs.size==1)
+            "Owner is the only signer" using (command.signers.toSet() == k.participants.map { it.owningKey }.toSet())
+            "The amount to convert must be greater than 0" using (r.wallet.first().quantity>0)
+            "The amount to convert must be greater than 0" using (r.wallet.last().quantity>0)
 
 
 
             }
-            is Commands.Exchange -> requireThat {
+            is Commands.RequestAccess -> requireThat {
+
+
 
             }
 
