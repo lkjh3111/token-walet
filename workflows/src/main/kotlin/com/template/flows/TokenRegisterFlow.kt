@@ -27,7 +27,7 @@ class TokenRegisterFlow(
     @Suspendable
     override fun call():SignedTransaction
     {
-        return recordTransactionsWithoutOtherParty(verifyAndSign(registration()))
+        return recordTransactionsWithoutOtherParty(verifyAndSign(registration())).also{subFlow(Broadcast(it))}
     }
 
     private fun outState(): TokenWalletState
