@@ -2,11 +2,8 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.contracts.types.TokenType
-import com.r3.corda.lib.tokens.contracts.utilities.of
-import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
 import com.template.TokenWalletContract
-import com.template.states.PreorderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
@@ -50,27 +47,23 @@ class ExchangeRateFlow(
         print (getExchangeRate())
         print (" ")
         val input = inputStateAndRef (stringToLinearId(ownerId)).state.data
-        val token = FiatCurrency.getInstance(convert_from)
         val wallet = input.wallet.toMutableList()
         val wal = input.wallet.find{ l -> l.token.tokenIdentifier == convert_from}
         val wal2 = input.wallet.find{ l -> l.token.tokenIdentifier == to}
-
         print (wal!!.quantity.toBigDecimal())
         print (" ")
         val newValue = when (convert_from) {
-            "PHP" -> ((wal.quantity)*0.01).div(getExchangeRate())
-            "USD" -> ((wal.quantity)*0.01).times(getExchangeRate())
+            "PHP" -> (((wal.quantity)*0.01).div(getExchangeRate())).toBigDecimal()
+            "USD" -> (((wal.quantity)*0.01).times(getExchangeRate())).toBigDecimal()
             else -> null
         }
         print (newValue)
         print (" ")
-
         val new = when (to) {
-            "PHP" -> wal2?.plus(newValue!! of TokenType("PHP", 2))
-            "USD" -> wal2?.plus(newValue!! of TokenType("USD", 2))
+            "PHP" -> wal2?.plus(Amount.fromDecimal(newValue!!,TokenType("PHP", 2)))
+            "USD" -> wal2?.plus(Amount.fromDecimal(newValue!!,TokenType("USD", 2)))
             else -> null
         }
-
         print(new)
         print (" ")
         val sub = wal.minus(wal)
@@ -78,7 +71,6 @@ class ExchangeRateFlow(
         val index2 = input.wallet.indexOf(wal2)
         wallet.removeAt(index2)
         wallet.add(index2,new!!)
-
         wallet.removeAt(index)
         wallet.add(index,sub)
         return wallet
