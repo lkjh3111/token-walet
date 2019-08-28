@@ -1,6 +1,7 @@
 package com.template.controller
 
 import com.template.states.TokenWalletState
+import com.template.webserver.NodeRPCConnection
 import com.template.webserver.connection.NodeRPCConnection
 import com.template.webserver.models.TokenWalletModel
 import net.corda.core.messaging.vaultQueryBy
