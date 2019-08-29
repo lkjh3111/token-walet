@@ -40,7 +40,7 @@ private const val CONTROLLER_NAME = "config.controller.name"
                         username = it.username,
                         password = it.password,
                         wallet = it.wallet.toString(),
-                        linearId = it.linearId
+                        linearId = it.linearId.toString()
                 )
             }
             HttpStatus.CREATED to list
