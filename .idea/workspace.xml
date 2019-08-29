@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="804e7687-aa8d-4b42-af97-eb152dc44322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/TokenWalletController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/TokenWalletController.kt" afterDir="false" />
-    </list>
+    <list default="true" id="804e7687-aa8d-4b42-af97-eb152dc44322" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/clients/.gradle/" />
@@ -33,19 +30,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/TokenWalletController.kt">
+        <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/RequestModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/TokenWalletModel.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -73,6 +61,7 @@
         <option value="$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/IssuerController.kt" />
         <option value="$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/TokenWalletModel.kt" />
         <option value="$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/TokenWalletController.kt" />
+        <option value="$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/RequestModel.kt" />
       </list>
     </option>
   </component>
@@ -80,7 +69,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -167,7 +156,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/clients/src/main/kotlin/com/template/models" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -178,8 +167,8 @@
       <recent name="com.template.webserver" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jhan.domingo\Documents\Corda Files\Projects\token-wallet-api\clients\src\main\kotlin\com\template" />
       <recent name="C:\Users\jhan.domingo\Documents\Corda Files\Projects\token-wallet-api\clients\src\main\kotlin\com\template\models" />
+      <recent name="C:\Users\jhan.domingo\Documents\Corda Files\Projects\token-wallet-api\clients\src\main\kotlin\com\template" />
       <recent name="C:\Users\jhan.domingo\Documents\Corda Files\Projects\token-wallet-api\clients\src\main\kotlin\com\template\controller" />
       <recent name="C:\Users\jhan.domingo\Desktop\token-wallet-api\clients\src\main\kotlin\com\template" />
     </key>
@@ -210,9 +199,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06505295" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24432677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -230,7 +219,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,39 +265,50 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/IssuerModel.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/PlatformModel.kt" />
-    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/PreorderModel.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/UserController.kt" />
-    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/PreorderController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/IssuerController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/TokenWalletModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="51">
           <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/TokenWalletController.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="149">
           <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/PreorderController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/PreorderModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/IssuerModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/controller/IssuerController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2023">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/src/main/kotlin/com/template/models/RequestModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
