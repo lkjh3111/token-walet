@@ -8,12 +8,22 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/token-wallet.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/token-wallet.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/token-wallet.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/token-wallet.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.integrationTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.integrationTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" afterDir="false" />
@@ -24,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenPreOrderFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenPreOrderFlow.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,5 +140,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/token_wallet$token_wallet__deployNodes_.ic" NAME="token-wallet [deployNodes] Coverage Results" MODIFIED="1567041314899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

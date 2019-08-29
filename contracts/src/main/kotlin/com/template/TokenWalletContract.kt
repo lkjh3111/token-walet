@@ -22,6 +22,8 @@ class TokenWalletContract: Contract {
         class RequestAccess : TypeOnlyCommandData(), Commands
     }
 
+
+
     override fun verify(tx: LedgerTransaction) {
         val command = tx.commands.requireSingleCommand<Commands>()
 
