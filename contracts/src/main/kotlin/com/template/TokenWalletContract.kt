@@ -1,6 +1,5 @@
 package com.template
 
-import com.r3.corda.lib.tokens.contracts.EvolvableTokenContract
 import com.template.states.IssueOrderState
 import com.template.states.PreorderState
 import com.template.states.TokenWalletState

@@ -27,7 +27,6 @@ class TokenPreOrderFlow(
         return recordTransactionsWithoutOtherParty(verifyAndSign(preorder()))
     }
 
-
     private fun outState(): PreorderState
     {
         return PreorderState(

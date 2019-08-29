@@ -3,7 +3,6 @@ package com.template.flows
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
 import com.template.TokenWalletContract
-import com.template.states.IssueOrderState
 import com.template.states.RequestState
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
