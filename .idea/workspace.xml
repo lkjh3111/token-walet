@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e2c3db-ca55-478f-ba43-66907a25db51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/ExchangeRateFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/ExchangeRateFlow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenRegisterFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenRegisterFlow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenTransferFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenTransferFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/IssueOrderState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/IssueOrderState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/PreorderState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/PreorderState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/RequestState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/RequestState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/TokenWalletState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/states/TokenWalletState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/test.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +42,12 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/contracts">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/contracts/src/test/kotlin/com/template">
           <activation />
         </task>
         <projects_view />
@@ -48,7 +72,8 @@
   <component name="ProjectId" id="1Q1s8KTxkLEy8XpxkyDA2wYDPsp" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/aerotrax-corda" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/contracts/src/test/kotlin/com/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/contracts/src/test/kotlin/com/template" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
@@ -68,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TokenRegisterTest.mustIncludeRegisterCommand">
     <configuration name="token-wallet [deployNodes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -88,8 +113,49 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="token-wallet:contracts [test]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/contracts/src/test/kotlin/com/template" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TokenRegisterTest.mustIncludeRegisterCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="token-wallet.contracts.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.template.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.template" />
+      <option name="MAIN_CLASS_NAME" value="com.template.TokenRegisterTest" />
+      <option name="METHOD_NAME" value="mustIncludeRegisterCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.token-wallet:contracts [test]" />
+      <item itemvalue="Gradle.token-wallet [deployNodes]" />
+      <item itemvalue="JUnit.TokenRegisterTest.mustIncludeRegisterCommand" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TokenRegisterTest.mustIncludeRegisterCommand" />
         <item itemvalue="Gradle.token-wallet [deployNodes]" />
       </list>
     </recent_temporary>

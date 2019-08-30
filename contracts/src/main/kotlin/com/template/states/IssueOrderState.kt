@@ -1,14 +1,14 @@
 package com.template.states
 
 import com.r3.corda.lib.tokens.contracts.types.TokenType
-import com.template.TokenWalletContract
+import com.template.IssueOrderContract
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.BelongsToContract
 import net.corda.core.contracts.LinearState
 import net.corda.core.contracts.UniqueIdentifier
 import net.corda.core.identity.Party
 
-@BelongsToContract(TokenWalletContract::class)
+@BelongsToContract(IssueOrderContract::class)
 data class IssueOrderState(val amount: Long,
                            val currency: String,
                            val approve_request: Boolean,

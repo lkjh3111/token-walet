@@ -1,8 +1,8 @@
 package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
-import com.template.TokenWalletContract
-import com.template.TokenWalletContract.Companion.ID
+import com.template.TokenContract
+import com.template.TokenContract.Companion.ID
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.*
 import net.corda.core.flows.CollectSignaturesFlow
@@ -35,7 +35,7 @@ abstract class Test: FlowLogic<SignedTransaction>() {
 
     fun transactions(spiedOnMessage: ContractState): TransactionBuilder {
             val notary = serviceHub.networkMapCache.notaryIdentities.first()
-            val txCommand = Command(TokenWalletContract.Commands.Register(),ourIdentity.owningKey)
+            val txCommand = Command(TokenContract.Commands.Register(),ourIdentity.owningKey)
             return TransactionBuilder(notary)
                     .addOutputState(spiedOnMessage, ID)
                     .addCommand(txCommand)
