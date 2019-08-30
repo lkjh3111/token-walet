@@ -2,7 +2,7 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.RequestContract
 import com.template.states.IssueOrderState
 import com.template.states.RequestState
 import net.corda.core.contracts.Command
@@ -33,7 +33,7 @@ class RequestAccessFlow(private val requestAccessTo: String) : Test()
     }
 
     private fun request() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val cmd = Command(TokenWalletContract.Commands.RequestAccess(), listOf(ourIdentity.owningKey, stringToParty(requestAccessTo).owningKey))
+        val cmd = Command(RequestContract.Commands.RequestAccess(), listOf(ourIdentity.owningKey, stringToParty(requestAccessTo).owningKey))
         addOutputState(outState())
         addCommand(cmd)
     }

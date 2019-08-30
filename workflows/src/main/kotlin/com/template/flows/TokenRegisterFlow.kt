@@ -6,7 +6,7 @@ import com.r3.corda.lib.tokens.contracts.utilities.amount
 import com.r3.corda.lib.tokens.contracts.utilities.of
 import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.TokenContract
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
@@ -51,7 +51,7 @@ class TokenRegisterFlow(
     }
 
     private fun registration() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val cmd = Command(TokenWalletContract.Commands.Register(), listOf(ourIdentity.owningKey))
+        val cmd = Command(TokenContract.Commands.Register(), listOf(ourIdentity.owningKey))
         addOutputState(outState())
         addCommand(cmd)
     }

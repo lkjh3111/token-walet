@@ -7,7 +7,8 @@ import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.flows.rpc.MoveFungibleTokens
 import com.r3.corda.lib.tokens.workflows.flows.rpc.RedeemFungibleTokens
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.RequestContract
+
 import com.template.states.PreorderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Amount
@@ -66,7 +67,7 @@ class AcceptPreOrderFlow(private val txId: String) : Test()
         val wallet = input1.wallet
         val new = wallet.find{ l -> l.token.tokenIdentifier == input.currency}?.plus(input.amount of token)
         print (new)
-        val cmd = Command(TokenWalletContract.Commands.Accept(), listOf(ourIdentity.owningKey))
+        val cmd = Command(RequestContract.Commands.Accept(), listOf(ourIdentity.owningKey))
         addInputState(inputStateAndRef (stringToLinearId(txId)))
         addInputState(inputStateRef(stringToLinearId(input.ownerId)))
         addOutputState(outState().copy(wallet = newWallet()))

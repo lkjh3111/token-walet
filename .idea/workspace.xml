@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e2c3db-ca55-478f-ba43-66907a25db51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/clients/token-wallet.clients.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/contracts/token-wallet.contracts.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/token-wallet.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/token-wallet.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/token-wallet.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/token-wallet.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.integrationTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.integrationTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/workflows/token-wallet.workflows.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/additional-node-infos/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/bindings/activemq-bindings-1.bindings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/activemq-data-1.amq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/artemis/journal/server.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/brokers/rpc/journal/server.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/nodekeystore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/sslkeystore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/certificates/truststore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/network-parameters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/nodeInfo-777DA369F066FE34BEDE3E6334A1006A4026A02DD76AFA798204BD015C9965DE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/persistence.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/nodes/Notary/process-id" beforeDir="false" afterPath="$PROJECT_DIR$/build/nodes/Notary/process-id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/kotlin/contracts01jar-classes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/kotlin/com/template/TokenWalletContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/AcceptPreOrderFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/ExchangeRateFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/ExchangeRateFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenRegisterFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenRegisterFlow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenTransferFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/kotlin/com/template/flows/TokenTransferFlow.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,8 +48,13 @@
   <component name="ProjectId" id="1Q1s8KTxkLEy8XpxkyDA2wYDPsp" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/exchange-rates-oracle-master/exchange-rates-oracle-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/aerotrax-corda" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.template" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

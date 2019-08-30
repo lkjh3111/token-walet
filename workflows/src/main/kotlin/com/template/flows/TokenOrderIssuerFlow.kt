@@ -2,7 +2,7 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.IssueOrderContract
 import com.template.states.IssueOrderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Command
@@ -34,7 +34,7 @@ class TokenOrderIssuerFlow(private val amount: Long,
     }
 
     private fun issue(issuer: Party) = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val cmd = Command(TokenWalletContract.Commands.Issue(), listOf(ourIdentity.owningKey, issuer.owningKey))
+        val cmd = Command(IssueOrderContract.Commands.Issue(), listOf(ourIdentity.owningKey, issuer.owningKey))
         addOutputState(outState(issuer))
         addCommand(cmd)
     }

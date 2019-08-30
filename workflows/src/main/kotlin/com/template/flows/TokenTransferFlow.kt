@@ -8,7 +8,7 @@ import com.r3.corda.lib.tokens.money.FiatCurrency
 import com.r3.corda.lib.tokens.workflows.flows.rpc.IssueTokens
 import com.r3.corda.lib.tokens.workflows.flows.rpc.MoveFungibleTokens
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.IssueOrderContract
 import com.template.states.IssueOrderState
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Command
@@ -65,7 +65,7 @@ class TokenTransferFlow(private val approve_request: Boolean,
         }else {
             listOf(stringToParty("Platform"))
         }
-        val cmd = Command(TokenWalletContract.Commands.Transfer(), listOf(ourIdentity.owningKey, stringToParty("Platform").owningKey))
+        val cmd = Command(IssueOrderContract.Commands.Transfer(), listOf(ourIdentity.owningKey, stringToParty("Platform").owningKey))
         addInputState(inputStateAndRef(stringToLinearId(txId)))
         addOutputState(outState().copy(participants = participants))
         addCommand(cmd)

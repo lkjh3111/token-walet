@@ -2,7 +2,7 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.RequestContract
 import com.template.states.RequestState
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.StateAndRef
@@ -47,7 +47,7 @@ class ApproveRequestFlow(private val approveRequest: Boolean,
 
     private fun request() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
         val input = inputStateAndRef(stringToLinearId(linearId)).state.data
-        val cmd = Command(TokenWalletContract.Commands.RequestAccess(), listOf(ourIdentity.owningKey, input.participants[0].owningKey))
+        val cmd = Command(RequestContract.Commands.RequestAccess(), listOf(ourIdentity.owningKey, input.participants[0].owningKey))
         addInputState(inputStateAndRef(stringToLinearId(linearId)))
         addOutputState(outState())
         addCommand(cmd)

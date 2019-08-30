@@ -2,7 +2,7 @@ package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.PreOrderContract
 import com.template.states.IssueOrderState
 import com.template.states.PreorderState
 import com.template.states.TokenWalletState
@@ -40,7 +40,7 @@ class TokenPreOrderFlow(
         )
     }
     private fun preorder() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val cmd = Command(TokenWalletContract.Commands.PreOrder(), listOf(ourIdentity.owningKey))
+        val cmd = Command(PreOrderContract.Commands.PreOrder(), listOf(ourIdentity.owningKey))
         addOutputState(outState())
         addCommand(cmd)
     }

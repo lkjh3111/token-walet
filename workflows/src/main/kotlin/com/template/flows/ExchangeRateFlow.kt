@@ -3,7 +3,7 @@ package com.template.flows
 import co.paralleluniverse.fibers.Suspendable
 import com.r3.corda.lib.tokens.contracts.types.TokenType
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
-import com.template.TokenWalletContract
+import com.template.TokenContract
 import com.template.states.TokenWalletState
 import net.corda.core.contracts.Amount
 import net.corda.core.contracts.Command
@@ -77,7 +77,7 @@ class ExchangeRateFlow(
     }
 
     private fun registration() = TransactionBuilder(notary = getPreferredNotary(serviceHub)).apply {
-        val cmd = Command(TokenWalletContract.Commands.Exchange(), listOf(ourIdentity.owningKey))
+        val cmd = Command(TokenContract.Commands.Exchange(), listOf(ourIdentity.owningKey))
         addInputState(inputStateAndRef (stringToLinearId(ownerId)))
         addOutputState(outState())
         addCommand(cmd)
