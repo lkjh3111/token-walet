@@ -1,18 +1,13 @@
 package com.template.flows
 
 import co.paralleluniverse.fibers.Suspendable
-import com.r3.corda.lib.tokens.contracts.utilities.heldBy
-import com.r3.corda.lib.tokens.contracts.utilities.issuedBy
 import com.r3.corda.lib.tokens.contracts.utilities.of
 import com.r3.corda.lib.tokens.money.FiatCurrency
-import com.r3.corda.lib.tokens.workflows.flows.rpc.IssueTokens
 import com.r3.corda.lib.tokens.workflows.flows.rpc.MoveFungibleTokens
 import com.r3.corda.lib.tokens.workflows.utilities.getPreferredNotary
 import com.template.TokenWalletContract
 import com.template.states.IssueOrderState
-import com.template.states.TokenWalletState
 import net.corda.core.contracts.Command
-import net.corda.core.contracts.Requirements.using
 import net.corda.core.contracts.StateAndRef
 import net.corda.core.contracts.UniqueIdentifier
 import net.corda.core.contracts.requireThat
